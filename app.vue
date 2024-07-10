@@ -1,5 +1,14 @@
 <template>
-  <div>
+  <n-config-provider :theme-overrides="theme">
     <NuxtPage />
-  </div>
+  </n-config-provider>
 </template>
+<script lang="ts" setup>
+import type { GlobalThemeOverrides } from 'naive-ui'
+
+const theme: GlobalThemeOverrides = {
+  common: {
+    primaryColor: '#538cc6'
+  }
+}
+</script>
